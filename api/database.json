@@ -1,0 +1,25 @@
+{
+    "users" : [
+      {
+        "id": 1,
+        "name":"Matt"
+      }
+    ],
+    "tacos": [
+      {
+        "id": 3,
+        "name": "Crunchy"
+      },
+      {
+        "id": 5,
+        "name": "soft"
+      }
+    ],
+    "orders": [
+      {
+        "id":1,
+        "tacoId":1,
+        "userId":1
+      }
+    ]
+  }
