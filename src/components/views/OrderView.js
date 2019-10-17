@@ -10,7 +10,7 @@ class OrderView extends Component {
 
     getOrders = () => {
         APIManager.getAllOrders(this.props.userId)
-            .then((results) => {
+            .then(results => {
                 console.log(results)
                 this.setState({
                     orders: results
