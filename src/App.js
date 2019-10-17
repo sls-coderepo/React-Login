@@ -23,7 +23,8 @@ class App extends Component {
       JSON.stringify(authObj)
     )
     this.setState({
-      user: this.isAuthenticated()
+      user: this.isAuthenticated(),
+      userId: authObj.id
     });
   }
 
@@ -37,10 +38,12 @@ class App extends Component {
   }
   componentDidMount() {
     this.setState({
-      user: this.isAuthenticated()
+      user: this.isAuthenticated(),
+      
     })
   }
 
+ 
   render() {
     return (
       <>
@@ -57,8 +60,9 @@ class App extends Component {
       <>
         {this.state.user ? (
           <>
-            <ApplicationViews />
-            <NavBar />
+           <NavBar />
+            <ApplicationViews  user={this.state.user}/>
+           
           </>
         ) : (
             <Login setUser={this.setUser} />

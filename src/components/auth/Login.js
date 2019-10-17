@@ -23,14 +23,27 @@ class Login extends Component {
             the customer enters into local storage.
         */
         let credentials = { email: this.state.email, password: this.state.password }
-        APIManager.addUser(credentials)
+        APIManager.searchUsername(this.state.email)
             .then(result => {
-                console.log("result is", result)
+                console.log(result)
+                if (result.length > 0) {
+                    console.log("if triggered")
+                    this.props.setUser(result);
+                    this.props.history.push("/ordernow");
+                } else {
+                    console.log(credentials)
+                    APIManager.addUser(credentials)
+                        .then(result => {
+                            console.log("result is", result);
+                            this.props.setUser(result);
+                        })
+                        this.props.history.push("/")
+                }
+               
             })
-        this.props.setUser(credentials);
-        this.props.history.push("/");
-
-    }
+    }    
+        // grabbing props from previous obj and pushing it back to the history; 
+        // we get history from Router. 
 
 
 

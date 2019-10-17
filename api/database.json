@@ -1,23 +1,51 @@
 {
-  "users": [
+  "tacos": [
     {
       "id": 1,
-      "name": "Matt"
+      "name": "Chicken Taco",
+      "type": "chicken"
+    },
+    {
+      "id": 2,
+      "name": "Beef Taco",
+      "type": "beef"
+    },
+    {
+      "id": 3,
+      "name": "Veggie Taco",
+      "type": "veggie"
+    },
+    {
+      "id": 4,
+      "name": "Chicken Burrito",
+      "type": "chicken"
+    },
+    {
+      "id": 5,
+      "name": "Beef Burrito",
+      "type": "burrito"
+    },
+    {
+      "id": 6,
+      "name": "Veggie Burrito",
+      "type": "burrito"
+    }
+  ],
+  "users": [
+    {
+      "email": "shirish@123.com",
+      "password": "shirish",
+      "id": 1
+    },
+    {
+      "email": "keith@123.com",
+      "password": "keith",
+      "id": 2
     },
     {
       "email": "shirish@shirish.com",
       "password": "1234",
-      "id": 2
-    }
-  ],
-  "tacos": [
-    {
-      "id": 3,
-      "name": "Crunchy"
-    },
-    {
-      "id": 5,
-      "name": "soft"
+      "id": 3
     }
   ],
   "orders": [
@@ -25,6 +53,23 @@
       "id": 1,
       "tacoId": 1,
       "userId": 1
+    },
+    {
+      "id": 2,
+      "tacoId": 2,
+      "userId": 2
+    },
+    {
+      "id": 3,
+      "tacoId": 3,
+      "userId": 2
+    }
+  ],
+  "favorites": [
+    {
+      "id": "",
+      "userId": "",
+      "tacoId": ""
     }
   ]
 }
